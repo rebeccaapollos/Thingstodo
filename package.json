@@ -1,0 +1,30 @@
+{
+  "name": "dolist",
+  "version": "1.0.0",
+  "description": "you can find this app live at [Things to do](https://beckythingstodo.herokuapp.com/)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && NPM_CONFIG_PRODUCTION=false npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeccaapollos/thingstodo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebeccaapollos/thingstodo/issues"
+  },
+  "homepage": "https://github.com/rebeccaapollos/thingstodo#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "postgraphile": "^4.9.2"
+  }
+}
